@@ -32,6 +32,37 @@ const navItems: NavItem[] = [
     name: "Dashboard",
     subItems: [{ name: "Ecommerce", path: "/", pro: false }],
   },
+
+  {
+    icon: <CalenderIcon />,
+    name: "Consumption Data Processing",
+    path: "/cdp",
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Billing & Tariff Management",
+    path: "/calendar",
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Forecasting & Resource Planning",
+    path: "/calendar",
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Compliance & ESG Reporting",
+    path: "/calendar",
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Maintenance Management",
+    path: "/calendar",
+  },
+  {
+    icon: <CalenderIcon />,
+    name: "Energy Procurement",
+    path: "/calendar",
+  },
   {
     icon: <CalenderIcon />,
     name: "Calendar",
@@ -313,25 +344,25 @@ const AppSidebar: React.FC = () => {
             <>
               <Image
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src="/images/logo/ERP-logo.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={230}
+                height={50}
               />
               <Image
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo/ERP-logo-dark.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={200}
+                height={50}
               />
             </>
           ) : (
             <Image
-              src="/images/logo/logo-icon.svg"
+              src="/images/logo/ERP-logo-dark.svg"
               alt="Logo"
-              width={32}
-              height={32}
+              width={42}
+              height={42}
             />
           )}
         </Link>
