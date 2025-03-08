@@ -9,8 +9,8 @@ import DemographicCard from "@/components/ecommerce/DemographicCard";
 
 export const metadata: Metadata = {
   title:
-    "Next.js E-commerce Dashboard | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Home for TailAdmin Dashboard Template",
+    "Adey ERP System - Utility Management",
+  description: "The Adey ERP System includes a Utility Management module designed to streamline and optimize the administration of utility services, such as electricity, water, gas, and telecommunications.",
 };
 
 export default function Ecommerce() {
