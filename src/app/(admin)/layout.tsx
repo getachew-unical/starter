@@ -4,22 +4,34 @@ import { useSidebar } from "@/context/SidebarContext";
 import AppHeader from "@/layout/AppHeader";
 import AppSidebar from "@/layout/AppSidebar";
 import Backdrop from "@/layout/Backdrop";
-import React from "react";
-
+import React,{useEffect} from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import { useRouter, usePathname } from "next/navigation";
 export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const { isExpanded, isHovered, isMobileOpen } = useSidebar();
-
-  // Dynamic class for main content margin based on sidebar state
+   const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+   console.log("isAuthenticated",isAuthenticated)
+  const router = useRouter();
   const mainContentMargin = isMobileOpen
     ? "ml-0"
     : isExpanded || isHovered
     ? "lg:ml-[290px]"
     : "lg:ml-[90px]";
 
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push('/signin');
+    }
+  }, [isAuthenticated, router]);
+
+  if (!isAuthenticated) {
+    return null; // Prevent rendering anything while redirecting
+  }
   return (
     <div className="min-h-screen xl:flex">
       {/* Sidebar and Backdrop */}

@@ -4,16 +4,22 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
-
+import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
+import { logout } from "@/app/redux/features/auth/authentication";
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);
-
+const dispatch=useDispatch()
   function toggleDropdown() {
     setIsOpen(!isOpen);
   }
 
   function closeDropdown() {
     setIsOpen(false);
+  }
+  const handleLogout=()=>{
+localStorage.removeItem("auth-token");
+    dispatch(logout());
   }
   return (
     <div className="relative">
@@ -25,13 +31,13 @@ export default function UserDropdown() {
           <Image
             width={44}
             height={44}
-            src="/images/user/owner.jpg"
+            src="/images/user/daniel.jpeg"
             alt="User"
           />
         </span>
 
         <span className="block mr-1 font-medium text-theme-sm">
-          Musharof
+          Daniel
         </span>
 
         <svg
@@ -61,10 +67,10 @@ export default function UserDropdown() {
       >
         <div>
           <span className="block font-medium text-gray-700 text-theme-sm dark:text-gray-400">
-       Musharof Chowdury
+       Daniel Feseha Melesse
           </span>
           <span className="mt-0.5 block text-theme-xs text-gray-500 dark:text-gray-400">
-           randomuser@pimjo.com
+           daniel@adey.com
           </span>
         </div>
 
@@ -147,6 +153,8 @@ export default function UserDropdown() {
         </ul>
         <Link
           href="/signin"
+                onClick={handleLogout}
+
           className="flex items-center gap-3 px-3 py-2 mt-3 font-medium text-gray-700 rounded-lg group text-theme-sm hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
         >
           <svg

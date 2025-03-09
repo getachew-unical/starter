@@ -7,10 +7,25 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Next.js Form Layout | TailAdmin - Next.js Dashboard Template",
-  description:
-    "This is Next.js Form Layout page for TailAdmin - Next.js Tailwind CSS Admin Dashboard Template",
+  title:
+    "Adey ERP System - Utility Management",
+  description: "The Adey ERP System includes a Utility Management module designed to streamline and optimize the administration of utility services, such as electricity, water, gas, and telecommunications.",
+ icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme:light)', 
+        url: '/images/logo/favicon.ico', 
+        href: '/images/logo/favicon.ico',
+      },
+       {
+        media: '(prefers-color-scheme:dark)', 
+         url: '/images/logo/favicon.ico', 
+        href: '/images/logo/favicon.ico',
+      }
+    ],
+  },
 };
+
 
 export default function FormLayout() {
   return (
