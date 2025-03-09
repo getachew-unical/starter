@@ -36,27 +36,27 @@ const navItems: NavItem[] = [
   {
     icon: <CalenderIcon />,
     name: "Billing & Tariff Management",
-    path: "/calendar",
+    path: "/Btm",
   },
   {
     icon: <CalenderIcon />,
     name: "Forecasting & Resource Planning",
-    path: "/calendar",
+    path: "/Frp",
   },
   {
     icon: <CalenderIcon />,
     name: "Compliance & ESG Reporting",
-    path: "/calendar",
+    path: "/Cer",
   },
   {
     icon: <CalenderIcon />,
     name: "Maintenance Management",
-    path: "/calendar",
+    path: "/Mm",
   },
   {
     icon: <CalenderIcon />,
     name: "Energy Procurement",
-    path: "/calendar",
+    path: "/Ep",
   },
 
   {
@@ -84,7 +84,7 @@ const AppSidebar: React.FC = () => {
           {nav.subItems ? (
             <button
               onClick={() => handleSubmenuToggle(index, menuType)}
-              className={`menu-item group shadow-red-600 ${
+              className={`menu-item group ${
                 openSubmenu?.type === menuType && openSubmenu?.index === index
                   ? "menu-item-active"
                   : "menu-item-inactive"
@@ -212,7 +212,7 @@ const AppSidebar: React.FC = () => {
   // const isActive = (path: string) => path === pathname;
    const isActive = useCallback((path: string) => path === pathname, [pathname]);
 
-
+  
   useEffect(() => {
     // Set the height of the submenu items when the submenu is opened
     if (openSubmenu !== null) {

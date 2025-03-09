@@ -125,7 +125,7 @@ localStorage.removeItem("auth-token");
               Account settings
             </DropdownItem>
           </li>
-          <li>
+          {/* <li>
             <DropdownItem
               onItemClick={closeDropdown}
               tag="a"
@@ -149,7 +149,7 @@ localStorage.removeItem("auth-token");
               </svg>
               Support
             </DropdownItem>
-          </li>
+          </li> */}
         </ul>
         <Link
           href="/signin"
