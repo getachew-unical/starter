@@ -10,7 +10,6 @@ import {
   ChevronDownIcon,
   GridIcon,
   HorizontaLDots,
-
   UserCircleIcon,
 } from "../icons/index";
 import SidebarWidget from "./SidebarWidget";
@@ -26,7 +25,7 @@ const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    path:"/",
+    subItems: [{ name: "Summary", path: "/", pro: false }],
   },
 
   {
@@ -85,7 +84,7 @@ const AppSidebar: React.FC = () => {
           {nav.subItems ? (
             <button
               onClick={() => handleSubmenuToggle(index, menuType)}
-              className={`menu-item group  ${
+              className={`menu-item group shadow-red-600 ${
                 openSubmenu?.type === menuType && openSubmenu?.index === index
                   ? "menu-item-active"
                   : "menu-item-inactive"

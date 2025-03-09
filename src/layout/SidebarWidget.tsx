@@ -12,7 +12,7 @@ export default function SidebarWidget() {
       <p className="mb-4 text-gray-500 text-theme-sm dark:text-gray-400">
 The Adey ERP System includes a Utility Management module designed to streamline and optimize the administration of utility services, such as electricity, water, gas, and telecommunications.      </p>
       <a
-        href="https://tailadmin.com/pricing"
+        href="https://adey-meselesh.de/"
         target="_blank"
         rel="nofollow"
         className="flex items-center justify-center p-3 font-medium text-white rounded-lg bg-brand-500 text-theme-sm hover:bg-brand-600"
