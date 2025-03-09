@@ -11,7 +11,7 @@ export default function SignUpForm() {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div className="flex flex-col flex-1 p-6 rounded-2xl sm:rounded-none sm:border-0 sm:p-8">
-      <div className="w-full max-w-md pt-5 mx-auto lg:max-w-screen-sm sm:py-10">
+      <div className="w-full max-w-md lg:max-w-screen-md pt-5 mx-auto sm:py-10">
         <Link
           href="/"
           className="inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
@@ -35,7 +35,7 @@ export default function SignUpForm() {
           Back to dashboard
         </Link>
       </div>
-      <div className="flex flex-col justify-center flex-1 w-full max-w-md lg:max-w-screen-sm mx-auto">
+      <div className="flex flex-col justify-center flex-1 w-full max-w-md lg:max-w-screen-md mx-auto">
         <div className="mb-5 sm:mb-8">
           <h1 className="mb-2 font-semibold text-gray-800 text-title-sm dark:text-white/90 sm:text-title-md">
             Sign Up
