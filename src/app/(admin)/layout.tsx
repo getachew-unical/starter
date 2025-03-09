@@ -7,7 +7,7 @@ import Backdrop from "@/layout/Backdrop";
 import React,{useEffect} from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation"; //usePathname
 export default function AdminLayout({
   children,
 }: {

@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Dropdown } from "../ui/dropdown/Dropdown";
 import { DropdownItem } from "../ui/dropdown/DropdownItem";
 import { useDispatch } from "react-redux";
-import { useRouter } from "next/navigation";
+//import { useRouter } from "next/navigation";
 import { logout } from "@/app/redux/features/auth/authentication";
 export default function UserDropdown() {
   const [isOpen, setIsOpen] = useState(false);

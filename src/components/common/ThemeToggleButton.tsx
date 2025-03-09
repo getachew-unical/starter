@@ -1,10 +1,10 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/app/redux/store";
+import { useDispatch } from "react-redux"; //useSelector
+//import { RootState } from "@/app/redux/store";
 import { toggleTheme } from "@/app/redux/features/theme/themeSlice";
 export const ThemeToggleButton: React.FC = () => {
   const dispatch = useDispatch();
-  const theme = useSelector((state: RootState) => state.theme.theme);
+  //const theme = useSelector((state: RootState) => state.theme.theme);
 
   const handleToggle = () => {
     dispatch(toggleTheme());
