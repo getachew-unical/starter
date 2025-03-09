@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function SignUp() {
   return (
-    <div className="relative flex w-full h-screen overflow-hidden bg-white z-1 dark:bg-gray-900">
+    <div className="relative flex w-full overflow-hidden bg-white z-1 dark:bg-gray-900">
       <SignUpForm />
       <div className="relative items-center justify-center flex-1 hidden p-8 z-1 bg-brand-950 dark:bg-white/5 lg:flex">
         {/* <!-- ===== Common Grid Shape Start ===== --> */}
