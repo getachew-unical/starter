@@ -74,6 +74,9 @@ importers:
       react-redux:
         specifier: ^9.2.0
         version: 9.2.0(@types/react@19.0.8)(react@19.0.0)(redux@5.0.1)
+      redux:
+        specifier: ^5.0.1
+        version: 5.0.1
       swiper:
         specifier: ^11.2.0
         version: 11.2.3
